@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="display">
+<br>
+<button onclick="press(1)">1</button>
+<button onclick="press(2)">2</button>
+<button onclick="press('+')">+</button>
+<button onclick="calculate()">=</button>
+
+<script>
+function press(val){
+  document.getElementById("display").value += val;
+}
+
+function calculate(){
+  let result = eval(document.getElementById("display").value);
+  document.getElementById("display").value = result;
+}
+</script>
+
+</body>
+</html>
